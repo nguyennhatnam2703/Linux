@@ -1,21 +1,21 @@
 ﻿
-#Tìm hiểu về lịch sử hình thành,phát triển của Linux.
+# Tìm hiểu về lịch sử hình thành,phát triển của Linux.
 
-#Mục lục
+# Mục lục
 
-[1. Nguồn gốc ra đời](#1)
+- [1. Nguồn gốc ra đời](#1)
 
-[2. Quá trình phát triển](#2)
+- [2. Quá trình phát triển](#2)
 
-[3. Các loại nhân hệ điều hành](#3)
+- [3. Các loại nhân hệ điều hành](#3)
 
-[3.1:Kernel là gì](#3.1)
+- [3.1:Kernel là gì](#3.1)
 
-[3.2:Microkernel](#3.2)
+- [3.2:Microkernel](#3.2)
 
-[3.3:Monolithic kernel](#3.3)
+- [3.3:Monolithic kernel](#3.3)
 
-[3.4:Hybrid Kernel](#3.4) 
+- [3.4:Hybrid Kernel](#3.4) 
 
 
 
