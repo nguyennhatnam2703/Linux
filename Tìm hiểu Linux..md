@@ -19,7 +19,7 @@
 
 
 
-[<a name="1"><a>
+<a name="1"><a>
 # 1. Nguồn gốc của LINUX.
 
 Linux ra đời năm 1991 được viết bởi Torvalds. Hệ điều hành MINIX chính là nguồn cảm hứng cho Torvalds viết LINUX.Nói về MINIX thì MINIX là hệ điều hành kiểu UNIX được thiết kế bởi giáo sư Andrew S.Tanenbaum với mục đích giáo dục.
@@ -49,11 +49,13 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 -Năm 2007,các hãng sản xuất máy tính như Hp,ASUS,Dell,..bắt đầu bán ra các sản phẩm laptop được cài đặt sẵn Linux.
 
 -Hiệm nay Linux được sư dụng rộng rãi trên toàn thế giới,trên các máy tính các nhân,các máy chủ,thiết bị di động,....
-
+<a name="3"></a>
 # 3.Các loại nhân hệ điều hành
 
+<a name="3.1"></a>
 ## 3.1.Kernel là gì? 
 
 Kernel là thành phần cốt lõi của một hệ điều hành.Nó hoạt động như một cầu nối giữu các ứng dụng và xử lí dữ liệu được thực hiện ở cấp độ phần cứng. Kernel có vài trò cung cấp và quản lí tài nguyên máy tính,cho phép các chương trình khác chạy và sử dụng tài nguyên này.Ngoài ra Kernel còn có vai trò thiết lập không gian địa chỉ cho bộ nhớ cho các ứng dụng,tải các tệp có mã ứng dụng vào bộ nhớ.
 
+<a name="3.2"></a>
 ## 3.2.Microkernel
