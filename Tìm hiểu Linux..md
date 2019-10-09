@@ -46,9 +46,9 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 
 -Năm 2004,phát hành hai phiên bản Ubuntu, Centos.
 
--Năm 2007,các hãng sản xuất máy tính như Hp,ASUS,Dell,..bắt đầu bán ra các sản phẩm laptop được cài đặt sẵn Linux.
+- Năm 2007,các hãng sản xuất máy tính như Hp,ASUS,Dell,..bắt đầu bán ra các sản phẩm laptop được cài đặt sẵn Linux.
 
--Hiệm nay Linux được sư dụng rộng rãi trên toàn thế giới,trên các máy tính các nhân,các máy chủ,thiết bị di động,....
+- Hiệm nay Linux được sư dụng rộng rãi trên toàn thế giới,trên các máy tính các nhân,các máy chủ,thiết bị di động,....
 <a name="3"></a>
 # 3.Các loại nhân hệ điều hành
 
@@ -59,3 +59,5 @@ Kernel là thành phần cốt lõi của một hệ điều hành.Nó hoạt đ
 
 <a name="3.2"></a>
 ## 3.2.Microkernel
+
+![microkernel](../image/Microkernel.jpg)
