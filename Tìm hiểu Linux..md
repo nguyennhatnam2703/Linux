@@ -11,6 +11,25 @@
 
 - [3.1:Kernel là gì](#3.1)
 
+- [3.2:Vai trò kernel](#3.2)
+
+- [3.3.Cấu trúc và quy ước số hiệu phiên bản của nhân Linux](#3.3)
+
+- [4.Protection Rings](#4)
+
+- [4.1.Các khái niệm cơ bản](#4.1)
+
+- [4.2. Kernel mode](#4.2)
+
+- [4.3. User mode](#4.3)
+
+- [5.Linux distribution.](#5)
+
+- [5.1. Khái niệm](#5.1)
+
+- [5.2. Các bản phân phôí phổ biến](#5.2)
+
+
 
 
 
@@ -106,16 +125,49 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 <a name="5.2.1"></a>
  ## 5.2.1:Debian
  
- <a name="5.2.1.1"></a>
+ <a name="a"></a>
  ## a, Giới thiệu
  - Debian là một bản phân phối phi thương mại và là một trong những bản phân phối ra đời sớm nhất
  - Hiện tại các hệ thống Debian sử dụng nhân Linux hoặc nhân FreeBSD.
  - Là phần mềm tự do.
- - Có rất nhiều distribution dựa trên Debian như Ubuntu ,Astra-Linux ,Collax, Cumulus Linux ,Damn Small Linux ,Debian JP ,DoudouLinux . 
- <a name="5.2.1.2"></a>
+ - Có rất nhiều distribution dựa trên Debian như Ubuntu ,Astra-Linux ,Collax, Cumulus Linux ,Damn Small Linux ,Debian JP ,DoudouLinux 
+ . 
+ <a name="b"></a>
  ## b, Hệ điều hành Ubuntu
  - Ubuntu là tên một hệ điều hành máy tính,được ra đời vào năm 2004.
  - Hệ điều hành Ubuntu phát triển dựa trên Debian GNU/Linux và được sản xuất bởi Canonical Ltd.
+ - Miễn phí cho người sử dụng,liên tục cho ra các phiên bản mới cụ thể cứ 6 tháng thì Ubuntu sẽ phát hành một bản mới.
+ - Các bản phân phối của Ubuntu:
+ -  + Kubuntu là bản phân phối Ubuntu để sử dụng môi trường làm việc KDE.
+ -  + Lubuntu là phiên bản gọn nhẹ nhất sử dụng LXDE, được khuyên dùng cho các máy tính cũ, cấu hình thấp.
+ -  + Xubuntu là bản phân phối với giao diện mặc định Xfce.
+ -  + Myth ubuntu là bản phân phối dành cho hệ thống kênh truyền hình MythTV, thích hợp cho giải trí tại gia đình.
+ -  + Ubuntu Studio là nền tảng chuyên phục vụ chỉnh sửa video và âm thanh chuyên nghiệp, chất lượng cao. Nền tảng này bao gồm nhiều           phần mềm chỉnh sửa đa phương tiện.
+
+<a name="5.2.2"></a>
+ ## 5.2.2:Fedora
+ 
+ <a name="a"></a>
+ ## a,Giới thiệu
+ - Fedora, trước đây gọi là Fedora Core, là một Bản phân phối Linux dựa trên RPM Package Manager, được phát triển dựa trên cộng đồng        theo "Dự án Fedora (Fedora Project) và được bảo trợ bởi Red Hat.
+ - Fedora được thiết kế để có thể dễ dàng cài đặt với chương trình cài đặt mang giao diện đồ họa vì có hỗ trợ công cụ quản lý gói phần      mềm yum và rpm với file .rpm .
+ - Miễn phí cho người sử dụng.
+
+<a name="b"></a>
+ ## b,Hệ điều hành Redhat
+ 
+ - Redhat là một bản phân phối Linux được phát triển bởi Red Hat và mục tiêu hướng tới thị trường thương mại.
+ - Red Hat Enterprise Linux được phát hành cho các phiên bản máy chủ x86, x86-64, Itanium, PowerPC và IBM System z, và các phiên bản máy   tính để bàn cho x86 và x86-64
+ 
+ <a name="c"></a>
+ ## c,Hệ điều hành Centos.
+ 
+ - Centos là một Bản phân phối Linux. Nó có nguồn gốc hoàn toàn từ bản phân phối Red Hat.
+ - Hướng tới đối tượng sử dụng là cá nhân .
+ 
+ ## Tóm tắt Linux distribution.
+ 
+ ![](http://www.aboutlinux.info/2006/04/mind-map-of-linux-distributions.html)
  
  
  
@@ -139,3 +191,5 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 [4] https://vi.wikipedia.org/wiki/B%E1%BA%A3n_ph%C3%A2n_ph%E1%BB%91i_Linux
  
 [5] https://www.debian.org/intro/about.vi.html
+ 
+[6] https://vi.wikipedia.org/wiki/Fedora
