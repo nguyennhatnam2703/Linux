@@ -104,12 +104,19 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
  ## 5.2. Các bản phân phôí phổ biến
 
 <a name="5.2.1"></a>
- ### 5.2.1:Debian
+ ## 5.2.1:Debian
  
  <a name="5.2.1.1"></a>
- ### 5.2.1.1 Giới thiệu
+ ## a, Giới thiệu
  - Debian là một bản phân phối phi thương mại và là một trong những bản phân phối ra đời sớm nhất
  - Hiện tại các hệ thống Debian sử dụng nhân Linux hoặc nhân FreeBSD.
+ - Là phần mềm tự do.
+ - Có rất nhiều distribution dựa trên Debian như Ubuntu ,Astra-Linux ,Collax, Cumulus Linux ,Damn Small Linux ,Debian JP ,DoudouLinux . 
+ <a name="5.2.1.2"></a>
+ ## b, Hệ điều hành Ubuntu
+ - Ubuntu là tên một hệ điều hành máy tính,được ra đời vào năm 2004.
+ - Hệ điều hành Ubuntu phát triển dựa trên Debian GNU/Linux và được sản xuất bởi Canonical Ltd.
+ 
  
  
  
