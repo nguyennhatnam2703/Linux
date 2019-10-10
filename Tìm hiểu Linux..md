@@ -60,7 +60,7 @@ Kernel là thành phần cốt lõi của một hệ điều hành.Nó hoạt đ
 <a name="3.2"></a>
 ## 3.2.Microkernel
 
-![microkernel](http://hoangit.org/wp-content/uploads/2016/09/Microkernel-1-1024x437.jpg)
+![microkernel](../image/Microkernel.jpg)
 
 ## Tài liệu
 
