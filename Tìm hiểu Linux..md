@@ -11,11 +11,7 @@
 
 - [3.1:Kernel là gì](#3.1)
 
-- [3.2:Microkernel](#3.2)
 
-- [3.3:Monolithic kernel](#3.3)
-
-- [3.4:Hybrid Kernel](#3.4) 
 
 
 
@@ -50,20 +46,70 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 
 - Hiệm nay Linux được sư dụng rộng rãi trên toàn thế giới,trên các máy tính các nhân,các máy chủ,thiết bị di động,....
 <a name="3"></a>
-# 3.Các loại nhân hệ điều hành
+# 3.Kernel
 
 <a name="3.1"></a>
 ## 3.1.Kernel là gì? 
 
-Kernel là thành phần cốt lõi của một hệ điều hành.Nó hoạt động như một cầu nối giữu các ứng dụng và xử lí dữ liệu được thực hiện ở cấp độ phần cứng. Kernel có vài trò cung cấp và quản lí tài nguyên máy tính,cho phép các chương trình khác chạy và sử dụng tài nguyên này.Ngoài ra Kernel còn có vai trò thiết lập không gian địa chỉ cho bộ nhớ cho các ứng dụng,tải các tệp có mã ứng dụng vào bộ nhớ.
+- Kernel là thành phần cốt lõi của một hệ điều hành.Sử dụng giao tiếp giữa quá trình và các call system, nó hoạt động như một cầu nối giữu các ứng dụng và xử lí dữ liệu được thực hiện ở cấp độ phần cứng. 
+- Khi một hệ điều hành được tải vào bộ nhớ,kernel sẽ tải trước và lưu lại trong bộ nhớ cho đến khi hệ điều hành được tắt lại.Kernel chịu trách nhiệm cho các tác vụ cấp thấp như quản lí bộ nhớ,quản lí đĩa,quản lí tác vụ
 
 <a name="3.2"></a>
-## 3.2.Microkernel
+## 3.2.Vai trò kernel 
 
-![](../../../image/Microkernel.jpg)
+- Nhân cung cấp và quản lí tài nguyên máy tính cho phép các chương trình khác chạy và sử dụng tài nguyên này.
+
+- Nhân thiết lập không gian địa chỉ bộ nhớ cho các ứng dụng,tải các tệp có mã ứng dụng vào bộ nhớ
+
+<a name="3.3"></a>
+## 3.3.Cấu trúc và quy ước số hiệu phiên bản của nhân Linux
+
+ Phiên bản nhân Linux bao gồm ba nhóm số được tạch bằng dấu chấm.Ví dụ:2.4.26
+ 
+ - Số thứ nhât: 2 là số hiệu phiên bản chính
+ - Số thứ hai: 4 là chỉ định cho tình trạng phiên bản. Nếu số này là số chẵn, nó chỉ định cho phiên bản ổn định (stable), có thể dùng      cho môi trường production. Nếu số này là số lẻ, nó chỉ định cho phiên bản không ổn định, nó thường dùng trong môi trường đang phát      triển (development). Các kernel thuộc dạng này thường có nhiều bugs và không ổn định. Nếu dùng các phiên bản này để tìm bugs và thông    báo cho nhóm phát triển Linux kernel thì đây là điều rất tốt. Không nên dùng phiên bản development cho môi trường production.
+ 
+ - Số thứ ba: 26 là chỉ định cho số hiệu phát hành của một phiên bản Linux kernel. Một phiên bản ổn định của một Linux kernel có thể có    nhiều số hiệu phát hành khác nhau.
+ <a name="4"></a>
+ ## 4.Protection Rings
+ 
+ <a name="4.1"></a>
+ ## 4.1.Các khái niệm cơ bản:
+ - Trong khoa học máy tính, Protection Rings là cơ chế nhằm bảo vệ dữ liệu và chức năng của một chương trình tránh khỏi nguy cơ lỗi hoặc bị truy cập trái phép bởi các chương trình khác.
+ - Một Protection Ring là một mức độ (mode/level/layer) truy cập tài nguyên hệ thống. Số lượng Ring tùy thuộc vào kiến trúc CPU và hệ điều hành chạy trên kiến trúc đó có khả năng hỗ trợ bao nhiêu Ring.
+ - Các Ring được sắp xếp có thứ bậc, từ mức có nhiều đặc quyền nhất  đến mức có ít đặc quyền nhất.
+ 
+ ![](https://manthang.files.wordpress.com/2010/10/protection-rings.jpg)
+ <a name="4.2"></a>
+ ## 4.2. Kernel mode
+ - Kernel mode là môt cơ chế hoạt động của CPU.
+ - Nếu 1 chương trình hoạt động trong Kernel Mode thì nó sẽ có thể nắm quyền sử dụng mọi tài nguyên hệ thống như: sử dụng được tất cả     các chỉ lệnh CPU, truy cập tới mọi vùng nhớ trong RAM…
+ 
+ <a name="4.3"></a>
+ ## 4.3. User mode
+ - User mode là một cơ chế hoạt động của CPU.
+ - Các chương trình nằm trong User Mode thì ít có đặc quyền truy cập tới tài nguyên hệ thống như: số lượng các chỉ lệnh CPU được sử dụng    bị giới hạn, bị cấm truy cập tới vùng nhớ được cấp phát cho Kernel và các chương trình khác…
+ - Tất cả các phần mềm ứng dụng lớp người dùng (thuộc untrusted software) khi mới được khởi chạy đều được đưa vào vùng User Mode.
+ 
+ <a name="5"></a>
+ ## 5.Linux distribution.
+ 
+ ## 5.1. Khái niệm
+ - Linux distribution là một hệ điều hành được tạo bởi tâp hợp nhiều phần mềm dựa trên hạt nhân Linux và thường có một hệ thống quản lí gói tin
+ - Linux distribution bao gồm bao gồm linux kernel , GNU tool and libraries , thêm một số software , documentation , window system ( phổ biến nhất là X Window System) , desktop environment .
+ 
+ ## 5.2. Các bản phân phôí
+ 
+ 
+ 
+ 
+ 
+
 
 ## Tài liệu
 
 [1] https://wikihoidap.org/kernel-la-gi
 
 [2] https://vi.wikipedia.org/wiki/Linux
+
+[3] https://manthang.wordpress.com/2010/10/30/co-che-protection-rings-trong-bao-mat-may-tinh/
