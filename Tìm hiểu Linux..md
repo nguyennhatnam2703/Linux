@@ -94,11 +94,26 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
  <a name="5"></a>
  ## 5.Linux distribution.
  
+<a name="5.1"></a> 
  ## 5.1. Khái niệm
+ 
  - Linux distribution là một hệ điều hành được tạo bởi tâp hợp nhiều phần mềm dựa trên hạt nhân Linux và thường có một hệ thống quản lí gói tin
  - Linux distribution bao gồm bao gồm linux kernel , GNU tool and libraries , thêm một số software , documentation , window system ( phổ biến nhất là X Window System) , desktop environment .
  
- ## 5.2. Các bản phân phôí
+ <a name="5.2"></a>
+ ## 5.2. Các bản phân phôí phổ biến
+
+<a name="5.2.1"></a>
+ ### 5.2.1:Debian
+ 
+ <a name="5.2.1.1"></a>
+ ### 5.2.1.1 Giới thiệu
+ - Debian là một bản phân phối phi thương mại và là một trong những bản phân phối ra đời sớm nhất
+ - Hiện tại các hệ thống Debian sử dụng nhân Linux hoặc nhân FreeBSD.
+ 
+ 
+ 
+ 
  
  
  
@@ -113,3 +128,7 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
 [2] https://vi.wikipedia.org/wiki/Linux
 
 [3] https://manthang.wordpress.com/2010/10/30/co-che-protection-rings-trong-bao-mat-may-tinh/
+
+[4] https://vi.wikipedia.org/wiki/B%E1%BA%A3n_ph%C3%A2n_ph%E1%BB%91i_Linux
+ 
+[5] https://www.debian.org/intro/about.vi.html
