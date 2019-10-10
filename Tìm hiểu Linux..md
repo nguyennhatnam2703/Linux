@@ -167,7 +167,7 @@ Ban đầu Linux kernel được phát triển trên môi trường MINIX.Sau đ
  
  ## Tóm tắt Linux distribution.
  
- ![](http://www.aboutlinux.info/2006/04/mind-map-of-linux-distributions.html)
+ ![](http://photos1.blogger.com/blogger/3370/2500/1600/GNULinuxupdatedw4.0.jpg)
  
  
  
