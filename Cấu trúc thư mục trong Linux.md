@@ -3,6 +3,10 @@
  # Mục lục
  
  # 1.Hệ thống file trong Linux
+  
+ - Trong hệ thống Linux, tất cả đều được cấu hình và coi như là file. Không chỉ bao gồm file text, ảnh, các chương trình biên dịch mà còn   cả các thư mục, phân vùng và drive thiết bị phần cứng đều được hệ thống nhìn nhận như một file. 
+ 
+ - Tất cả các file và thư mục đều xuất hiện trong thư mục root, kể cả khi các thư mục còn lại được lưu trong các thiết bị vật lý khác nhau    (trên ổ cứng khác, hoặc trên ổ cứng của máy tính khác)
  
  
  
