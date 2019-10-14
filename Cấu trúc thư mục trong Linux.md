@@ -34,7 +34,7 @@
    +   Thư mục này chứa tất cả các file cá nhân của từng người dùng. Ví dụ: /home/john, /home/marie
      
  - **2.7: /lib - Thư viện hệ thống**
-   +  Chứa cá thư viện hỗ trợ cho các file thực thi trong /bin và /sbin. Các thư viện này thường có tên bắt đầu bằng ld* hoặc lib*.so.*
+   +   Chứa thư viện chia sẻ được dùng bởi các tiến trình, các lệnh boot, lệnh hệ thống như trong /bin và /sbin. 
  
  - **2.8: /Media**
     + Thư mục tạm này chứa các thiết bị như CdRom /media/cdrom. floppy /media/floopy hay các phân vùng đĩa cứng /media/Data (hiểu như là ổ D:/Data trong Windows)
@@ -69,6 +69,13 @@
  
 - **2.16: /var - File về biến của chương trình**
   +   Thông tin về các biến của hệ thống được lưu trong thư mục này. Như thông tin về log file: /var/log, các gói và cơ sở dữ liệu       /var/lib...
+  
+- **2.17: /lib64**
+  + Tương như như lib nhưng dành cho 64bit
+  
+- **2.18: /etc**
+  + Chứa file cấu hình hệ thống và ứng dụng. 
+
  
  # Mục lục
  [1] https://www.howtogeek.com/117435/htg-explains-the-linux-directory-structure-explained/
