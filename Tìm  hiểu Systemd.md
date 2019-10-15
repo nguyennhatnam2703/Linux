@@ -41,7 +41,36 @@
     
     + `udev` dùng để quản lý các thiết bị và firmware
     
-    + `
+ ## 2.3.Unit file
+ - Tất cả các chương trình được quản lý bởi systemd đều được thực thi dưới dạng daemon hay background bên dưới nền và được cấu hình thành 1 file configuration gọi là unit file. 
+ - Các unit file này sẽ bao gồm 12 loại:`
+   + service (các file quản lý hoạt động của 1 số chương trình)
+   
+   + socket (quản lý các kết nối)
+   
+   + device (quản lý thiết bị)
+   
+   + mount (gắn thiết bị)
+   
+   + automount (tự đống gắn thiết bị)
+   
+   + swap (vùng không gian bộ nhớ trên đĩa cứng)
+   
+   + target (quản lý tạo liên kết)
+   
+   + path (quản lý các đường dẫn)
+   
+   + timer (dùng cho cron-job để lập lịch)
+   
+   + snapshot (sao lưu)
+   
+   + slice (dùng cho quản lý tiến trình)
+   
+   + scope (quy định không gian hoạt động)
+   
+  ## 2.4:Service 
+   
+   
 
   
   
