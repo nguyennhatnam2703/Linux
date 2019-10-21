@@ -15,9 +15,22 @@
 - Bật server Ubuntu ở VM
 
 - Mở Xshell lên và tiến hành điền thông tin máy chủ
+ + Đặt tên cho máy chủ ảo
+ 
+ + Điền địa chỉ IP máy chủ ảo
+ 
+ + Chon Port number
 
-- ![]( /image/ssh đăng nhập)
+- ![]( /image/ssh1_2.PNG )
+
+  + Nhập User name và Pass máy chủ ảo
+
+- ![]( /image/sshpass_2.PNG)
+
+- Connect vào Ubuntu Server
+
+- ![]( /image/sshubuntu.PNG)
 
 
-#
-*
+
+
