@@ -71,3 +71,8 @@
     - 5 0 * * * /root/backup.sh: có nghĩa là đoạn script:/root/bachup.sh sẽ được thực thi vào 0h 5 phút hằng ngày
     - 1 2 3 * *  :đoạn cript sẽ được thực thi vào 2h 1 phút của ngày 3 hàng tháng
     - 4 5 6 7 *: đoanh sript sẽ được thực thi vào lúc 5 giờ 4 phút ngày 6 tháng 7 hằng năm
+  # Tài liệu tham khảo
+  
+  [1] https://vntalking.com/toan-tap-cach-su-dung-crontab-tren-server-linux.html
+  
+  [2] https://vinahost.vn/crontab-linux-la-gi
