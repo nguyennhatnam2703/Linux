@@ -48,4 +48,35 @@
 |15|cron|Log từ clock daemon|
 |16-23|local 0-7|Log dự trữ cho sử dụng nội bộ|
 
+## Mức độ cảnh báo
+
+| code | Mức độ cảnh báo | Ý nghĩa |
+|------|-----------------|---------|
+|0|emerg|Thông báo tình trạng khẩn cấp|
+|1|alert|Hệ thống cần can thiệp ngay|
+|2|Crit|Tình trạng nguy kịch|
+|3|error|Thông báo lỗi từ hệ thống|
+|4|warn|Mức cảnh báo đối với hệ thống|
+|5|notice|Chú ý đối với hệ thống|
+|6|info|Thông tin hệ thống|
+|7|debug|Quá trình kiểm tra hệ thống|
+
+## Định dạng chung của một gói tin Syslog
+- Gồm ba phần PRI,header và MSG
+
+- `PRI`:Phần PRI hay Priority là một số được đặt trong ngoặc nhọn, thể hiện cơ sở sinh ra log hoặc mức độ nghiêm trọng, là một số gồm 8 bit:
+   + 3 bit đầu tiên thể hiện cho tính nghiêm trọng của thông báo.
+   + 5 bit còn lại đại diện cho sơ sở sinh ra thông báo.
+   
+- `Header`.Gồm các phần chính sau:
+   + Time stamp - Thời gian mà thông báo được tạo ra. Thời gian này được lấy từ thời gian hệ thống
+   + Hostname hoặc IP
+   
+- `MSG`:Chứa một số thông tin về quá trình tạo ra thông điệp đó.MSG gồm hai phần:
+   + Tag field:tên chương trình tạo ra thông báo.
+   + Contend field:chứa các chi tiết của thông báo
+
+
+
+
 
