@@ -75,7 +75,12 @@
 - `MSG`:Chứa một số thông tin về quá trình tạo ra thông điệp đó.MSG gồm hai phần:
    + Tag field:tên chương trình tạo ra thông báo.
    + Contend field:chứa các chi tiết của thông báo
-
+   
+## Rsyslog
+- Rsyslog là gì:
+  + Rsyslog dùng để chuyển tiếp các log message đến một địa chỉ trên mạng 
+  + Nó thực hiện giao thức syslog cơ bản, đặc biệt là sử dụng TCP cho việc truyền tải log từ client tới server.
+  + Hiện nay rsyslog là phần mềm được cài đặt sẵn trên hầu hết hệ thống Unix và các bản phân phối của Linux như : Fedora, openSUSE,    Debian, Ubuntu, Red Hat Enterprise Linux, FreeBSD…
 
 
 
