@@ -1,16 +1,4 @@
-﻿
+# Mục Lục
 
-
-#Tiêu đề
-##Tiêu đề
-***1.Thông tin cá nhân***
-**+Họ và tên**
-*Nguyễn Nhật Nam*
-**+Quê quán**
-`Hà Tĩnh`
-~~Hà Tĩnh~~
-***2.Giải trí***
-*2.1:Website*
-Link:http://youtube.com
-![Messi](https://media.giphy.com/media/h2OTpLeXqyYAE/giphy.gif)
-
+# 1.Khái niệm về log
+- Ví dụ:Trong hệ thống mạng doanh nghiệp có một máy chủ chứa dữ liệu quan trọng.Server này hoạt động 24/24,khi dữ liệu bị mất thì để điều ra xử lý hay tìm nguyên nhân khắc phục thì `log` sẽ giúp làm việc này.
