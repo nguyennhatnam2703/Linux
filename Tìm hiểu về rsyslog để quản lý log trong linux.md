@@ -122,7 +122,9 @@
 
 
   
-## Summary Quiz:
+## Answer the question:
+ -1.which file is used to configure rsyslog? ( file nào dùng để cấu hình rsyslog): /etc/
+ 
 
 
 
