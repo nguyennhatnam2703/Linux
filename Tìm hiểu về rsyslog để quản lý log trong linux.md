@@ -81,6 +81,49 @@
   + Rsyslog dùng để chuyển tiếp các log message đến một địa chỉ trên mạng 
   + Nó thực hiện giao thức syslog cơ bản, đặc biệt là sử dụng TCP cho việc truyền tải log từ client tới server.
   + Hiện nay rsyslog là phần mềm được cài đặt sẵn trên hầu hết hệ thống Unix và các bản phân phối của Linux như : Fedora, openSUSE,    Debian, Ubuntu, Red Hat Enterprise Linux, FreeBSD…
+  
+## 3.Rotating log file:
+
+  3.1: Vai trò roate
+  
+ - vai trò là quản lí log file trên hệ thống,bao gồm xoay vòng file log, di chuyển, nén, gửi tự động… 
+ - Rotate (xoay vòng) ở đây có thể hiểu là tiến trình xử lý file log cũ theo quy định trước đó (xóa/nén/move) đồng thời tạo ra file log mới.
+ - Khi một file log được roate,file log cũ thường được sao chép vào file log có ngày rotate trong đó
+ - Theo mặc định, bốn tệp nhật ký cũ được lưu giữ trên hệ thống. Các tập tin cũ hơn thời gian đó sẽ tự động bị xóa khỏi hệ thống.
+ - Các cài đặt mặc định của Roate được lưu ở tệp /etc/logrotate.conf 
+ 
+ 3.2: Cấu hình roate
+ - Các cài đặt mặc định của Roate được lưu ở tệp /etc/logrotate.conf 
+ - Thông tn cấu hình log file của từng ứng dụng cụ thể lưu tại `/etc/logrotate.d/` 
+ 
+ 3.2.1:Lựa chọn Log file được rotate
+ - Bạn có thể chỉ định cụ thể một hay nhiều file log với đường dẫn tuyệt đối của file log đó, phân biệt danh sách các log file cụ thể bằng khoảng trắng. Ví dụ:
+  + /home/*/logs/mysql*.log
+  
+3.2.2:Roate theo thời gian
+- Có 4 giá trị cấu hình tương ứng với khoảng thời gian log file sẽ được rotate:
+  +Daily: mỗi ngày
+  +Weekly: mỗi đầu tuần
+  +Monthly: mỗi đầu tháng
+  +Yearly: mỗi năm
+
+3.2.3:Roate theo dung lượng thời gian
+- Cấu hình rotate dựa theo dung lượng file luôn được ưu tiên cao hơn rotate dựa vào thời gian. 
+- Khi đó, nếu 1 file log được rotate theo cấu hình dung lượng file quy định thì thời gian rotate sẽ được khởi động lại mới.
+
+3.2.4: Rotate theo số lượng Log file
+- Quy định số lượng log file cũ đã được giữ lại sau khi rotate. \
+ Ví dụ:Ví dụ: rotate7 giữ lại 7 file log cũ. Trường hợp đã có đủ 7 file log cũ thì file cũ nhất sẽ bị xóa đi để chứa file log mới được tạo
+ 
+## journald
+ - Là một daemon (chạy background trên hệ thống), một bộ phận của systemd, là một system service thực hiện việc thu thập và lưu trữ dữ liệu logging.
+ - Mặc định log sẽ được chứa trong /run/log/journal/
+
+
+
+  
+## Summary Quiz:
+
 
 
 
