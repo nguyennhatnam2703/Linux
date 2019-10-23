@@ -124,17 +124,26 @@
   
 ## Answer the question:
  -1.which file is used to configure rsyslog? ( file nào dùng để cấu hình rsyslog): /etc/rsyslogd.conf 
- -2.	Which configuration file contains messages related to authentication?(file nào chứa cấu hình liên quan đến xác thực)
  
- -3.	If you do not configure anything, how long will it take for log files to be rotated away?( nếu không cấu hình thì mất bao lâu log files được rotated đi?)
- -4.	Which command enables you to log a message from the command line to the user facility, using the notice priority?(lệnh nào cho phép bạn gửi thông báo từ command đến user facility và notice priorty?)
- -5. 	Which line would you add to write all messages with a priority of info to the file /var/log/messages.info?( câu lệnh nào sẽ thêm vào để viết tất cả thông baos với mức độ ưu tiên vào thư mực /var/log/messages.info?)
- -6 	Which configuration file enables you to allow the journal to grow beyond its default size restrictions?(file cấu hình nào cho phép bạn cấu hình joural vượt quá size mặc định.
- -7. 	Which command enables you to see new messages in the journal scrolling by in real time?( command cho phép bạn xem thông báo mới trong joural theo thời gian thực ?)
+ -2.	Which configuration file contains messages related to authentication?(file nào chứa cấu hình liên quan đến xác thực):
+    `var/log/auth.log`
+ 
+ -3.	If you do not configure anything, how long will it take for log files to be rotated away?( nếu không cấu hình thì mất bao lâu log files được rotated đi?): `5 tuan <etc/logrotate.conf>`
+ 
+ -4.	Which command enables you to log a message from the command line to the user facility, using the notice priority?(lệnh nào cho phép bạn gửi thông báo từ command đến user facility và notice priorty?) `logger -p user.notice "USER NOTICE MESSAGE"`
+ 
+ -5. 	Which line would you add to write all messages with a priority of info to the file /var/log/messages.info?( câu lệnh nào sẽ thêm vào để viết tất cả thông baos với mức độ ưu tiên vào thư mực /var/log/messages.info?) logger 
+ 
+ -6 	Which configuration file enables you to allow the journal to grow beyond its default size restrictions?(file cấu hình nào cho phép bạn cấu hình joural vượt quá size mặc định. `/etc/systemd/journald.conf`
+ 
+ -7. 	Which command enables you to see new messages in the journal scrolling by in real time?( command cho phép bạn xem thông báo mới trong joural theo thời gian thực ?)`journalctl -f`
+ 
  -8.	Which command enables you to see all journald messages that have been writ-ten for PID 1 between 9:00 a.m. and 3:00 p.m.?
  ( Câu lệnh nào cho phép xem journal đã được viết ở PID=1 từ 9g sáng - 3g chiều)
+ 
  -9. 	Which command enables you to see journald messages since last reboot on a system where a persistent journal has been configured?
  (  Câu lệnh nào cho phép xem journal từ lần reboot trước đó khi đã được đóng dấu:)
+ 
  -10.	Which procedure enables you to make the journald journal persistent?( thủ tục nào cho phép bạn journal liên tục)
 
 
