@@ -34,5 +34,5 @@
     ![]( /image/net-ie.PNG)
     
   - Lệnh 10:Hiển thị tên Serviec và PID `netstart -tp`
-     ![]( /image/net-tp.PNG)
+     ![]( /image/net-tp.PNG).
   
