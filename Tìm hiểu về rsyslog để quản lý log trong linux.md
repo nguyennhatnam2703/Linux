@@ -82,17 +82,30 @@
   + Nó thực hiện giao thức syslog cơ bản, đặc biệt là sử dụng TCP cho việc truyền tải log từ client tới server.
   + Hiện nay rsyslog là phần mềm được cài đặt sẵn trên hầu hết hệ thống Unix và các bản phân phối của Linux như : Fedora, openSUSE,    Debian, Ubuntu, Red Hat Enterprise Linux, FreeBSD…
   
-## 3.Rotating log file:
+## 3.Logroate trong Linux:
 
-  3.1: Vai trò roate
+   3.1:Tổng quan:
+   
+   - Logroate là công cụ chương trình hỗ trợ cho việc quản lí file log trên hệ thống.
+   - Roate ở đâu có nghĩa là tiến trình tạo ta file log mới,các file log cũ trước đó sẽ được xử lý theo các quy định cấu hình như xóa/nén/move.
+   - Log file là một file text mà các chương trình ứng dụng sẽ xuất ra output chứa các thông tin có ích mà các quản trị hệ thống có thể hiểu được những gì đang xảy ra trên hệ thống
+   - Có thể hiểu logroate là chương trình hoạt động dựa trên việc xếp lịch crontab
+
+  3.2: Vai trò logroate
   
  - vai trò là quản lí log file trên hệ thống,bao gồm xoay vòng file log, di chuyển, nén, gửi tự động… 
- - Rotate (xoay vòng) ở đây có thể hiểu là tiến trình xử lý file log cũ theo quy định trước đó (xóa/nén/move) đồng thời tạo ra file log mới.
  - Khi một file log được roate,file log cũ thường được sao chép vào file log có ngày rotate trong đó
  - Theo mặc định, bốn tệp nhật ký cũ được lưu giữ trên hệ thống. Các tập tin cũ hơn thời gian đó sẽ tự động bị xóa khỏi hệ thống.
  - Các cài đặt mặc định của Roate được lưu ở tệp /etc/logrotate.conf 
  
- 3.2: Cấu hình roate
+ 3.3.Logroate hoạt động như thế nào:
+ - Chương trình logroate sẽ chạy load file cấu hình theo mặc định của script logroate:`/etc/logroate.conf `
+ - Hệ thống sẽ chạy chương trình logroate theo time lịch crontab,mặc định là daily `/etc/cron.daily/logroate.
+ - Nếu cấu hình logroate chạy mỗi ngày mà trong phần crontab lại cấu hình `cron.daily` thì việc roate các file log sẽ diễn ra mỗi tuần chứ không phải mỗi ngày.
+ - Xem trạng thái hoạt động các file log đang được logroate tương tác: `cat /var/lib/logroate.status`
+ - Tìm thêm thông tin chương trình logroate chạy trên hệ thống: `man logroate`
+ 
+ 3.4: Cấu hình roate
  - Các cài đặt mặc định của Roate được lưu ở tệp /etc/logrotate.conf 
  - Thông tn cấu hình log file của từng ứng dụng cụ thể lưu tại `/etc/logrotate.d/` 
  
