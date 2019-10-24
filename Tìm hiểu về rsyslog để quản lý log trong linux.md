@@ -100,8 +100,8 @@
  
  3.3.Logroate hoạt động như thế nào:
  - Chương trình logroate sẽ chạy load file cấu hình theo mặc định của script logroate:`/etc/logroate.conf `
- - Hệ thống sẽ chạy chương trình logroate theo time lịch crontab,mặc định là daily `/etc/cron.daily/logroate.
- - Nếu cấu hình logroate chạy mỗi ngày mà trong phần crontab lại cấu hình `cron.daily` thì việc roate các file log sẽ diễn ra mỗi tuần chứ không phải mỗi ngày.
+ - Hệ thống sẽ chạy chương trình logroate theo time lịch crontab,mặc định là daily `/etc/cron.daily/logroate.`
+ - Nếu cấu hình logroate chạy mỗi ngày mà trong phần crontab lại cấu hình `cron.weekly` thì việc roate các file log sẽ diễn ra mỗi tuần chứ không phải mỗi ngày.
  - Xem trạng thái hoạt động các file log đang được logroate tương tác: `cat /var/lib/logroate.status`
  - Tìm thêm thông tin chương trình logroate chạy trên hệ thống: `man logroate`
  
@@ -109,22 +109,22 @@
  - Các cài đặt mặc định của Roate được lưu ở tệp /etc/logrotate.conf 
  - Thông tn cấu hình log file của từng ứng dụng cụ thể lưu tại `/etc/logrotate.d/` 
  
- 3.2.1:Lựa chọn Log file được rotate
+ 3.4.1:Lựa chọn Log file được rotate
  - Bạn có thể chỉ định cụ thể một hay nhiều file log với đường dẫn tuyệt đối của file log đó, phân biệt danh sách các log file cụ thể bằng khoảng trắng. Ví dụ:
   + /home/*/logs/mysql*.log
   
-3.2.2:Roate theo thời gian
+3.4.2:Roate theo thời gian
 - Có 4 giá trị cấu hình tương ứng với khoảng thời gian log file sẽ được rotate:
   +Daily: mỗi ngày
   +Weekly: mỗi đầu tuần
   +Monthly: mỗi đầu tháng
   +Yearly: mỗi năm
 
-3.2.3:Roate theo dung lượng thời gian
+3.4.3:Roate theo dung lượng thời gian
 - Cấu hình rotate dựa theo dung lượng file luôn được ưu tiên cao hơn rotate dựa vào thời gian. 
 - Khi đó, nếu 1 file log được rotate theo cấu hình dung lượng file quy định thì thời gian rotate sẽ được khởi động lại mới.
 
-3.2.4: Rotate theo số lượng Log file
+3.4.4: Rotate theo số lượng Log file
 - Quy định số lượng log file cũ đã được giữ lại sau khi rotate. \
  Ví dụ:Ví dụ: rotate7 giữ lại 7 file log cũ. Trường hợp đã có đủ 7 file log cũ thì file cũ nhất sẽ bị xóa đi để chứa file log mới được tạo
  
