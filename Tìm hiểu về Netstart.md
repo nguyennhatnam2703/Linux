@@ -8,13 +8,13 @@
  
  # 2.Các lệnh nestart
  - Lệnh 1.Kiểm tra các cổng kết nối `netstart -a`
- ![]( /image/netstart -a.PNG)
+   ![]( /image/net-a.PNG)
  
  - Lệnh 2.Kiểm tra các cổng kết nối đang sử dụng TCP `netstart -at`
-  ![]( /image/net-at.PNG)
+   ![]( /image/net-at.PNG)
   
   - Lệnh 3.Kiểm tra các cổng kết nối đang sử dung UDP `netstart -au`
-   ![] (/image/net-au.PNG)
+   ![](/image/net-au.PNG)
    
   - Lệnh 4:Kiểm tra các port đang ở trạng thái listening ` netstart -l`
    ![]( /image/net-l.PNG)
