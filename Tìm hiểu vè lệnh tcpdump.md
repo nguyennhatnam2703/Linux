@@ -16,7 +16,7 @@
  - Một vài lệnh cơ bản:
  
  - a.xem các interface đang hoạt động `tcpdump -D`
-   ![]( /image/tcpdump-d.PNG)
+   + ![]( /image/tcpdump-d.PNG)
  
  - b.bắt gói tin trên interface `tcpdump -i <interface>
    + ví dụ bắt 10 gói tin trên card ens33 `tcpdump -c 10 -i ens33`
