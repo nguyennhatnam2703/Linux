@@ -23,6 +23,7 @@
  - là file văn bản chứa các thông tin các tài khoản User trên máy.Các user có thể đọc tập tin này nhưng chỉ có `User root` có quyền thay đổi.
  - dùng lệnh `cat /etc/passwd` để xem nội dung file:
    + ![]( /image/etc.passwd1.PNG)
+   
    + ![]( /image/etc.passwd2/PNG)
    + Cột thứ nhất là tên người dùng:giaovien1,giaovien2,sinhvien1,....
    + Cột thứ hai chỉ ra mật khẩu đã được mã hóa và lưu ở tập tin shadown
@@ -35,6 +36,7 @@
  - là file văn bản chứa các thông tin mật khẩu của các user trên máy.Chỉ có root mới có quyền đọc tập tin này.User root có quyền reset mật khẩu bất cứ user nào trên  máy.
  - sử dụng `cat /etc/shadown` :
    + ![]( /image/shadown1.PNG)
+   
    + ![]( /image/shadown2/PNG)
    + cột thứ 1 tên người sử dụng.
    + Cột thứ 2:Mật khẩu đã được mã hóa. Để trống – không có mật khẩu, Dấu “*” – tài khoản bị tạm ngưng (disable). 
