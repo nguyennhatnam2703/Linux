@@ -17,4 +17,19 @@
    + Read(r) :Đối với một file thì Read chính là quyền xem nội dung file đó còn đối với một folder thì Read chính là quyền xem các file      trong folder đó.
    + Write(w):Đối với một file thì Write cho phép thêm,sửa nội dung file còn đối với một folder thì Write cho phép thêm xóa một subfolder hay một file trong folder đó.
    + Execute(e):Cho phép thực thi chương trình,đối với thư mục thì Execute cho phép chuyển vào thư mục bằng lệnh cd
-   + Deny ( ): không có quyền làm một thao tác gì trên file hay thư mục
+   + Deny (-): không có quyền làm một thao tác gì trên file hay thư mục
+ - Kiểu file:
+ 
+   |Ký tự| Ý nghĩa|
+   |-----|--------|
+   |-|Tập tin thông thường|
+   |b|Tập tin đặc biệt block|
+   |c|Tập tin ký tự đặc biệt|
+   |d|Thư mục|
+   |l|Tập tin liên kết|
+   
+- Quyền truy xuất gồm ba nhóm:
+  + Quyền của người sở hữu(u): Là người tạo ra thư mục/file hoặc người được gán quyền sở hữu
+  + Quyền của nhóm sở hữu (g): Là nhóm người sử dụng được gán quyền
+  + Quyền của người dùng khác: Là những người không thuộc hai nhóm trên
+  
