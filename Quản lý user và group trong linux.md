@@ -24,7 +24,7 @@
  - dùng lệnh `cat /etc/passwd` để xem nội dung file:
    + ![]( /image/etc.passwd1.PNG)
    
-   + ![]( /image/etc.passwd2/PNG)
+   + ![]( /image/etc.passwd2.PNG)
    + Cột thứ nhất là tên người dùng:giaovien1,giaovien2,sinhvien1,....
    + Cột thứ hai chỉ ra mật khẩu đã được mã hóa và lưu ở tập tin shadown
    + Cột thứ 3  User ID là định định danh duy nhất của người dùng
@@ -37,7 +37,7 @@
  - sử dụng `cat /etc/shadown` :
    + ![]( /image/shadown1.PNG)
    
-   + ![]( /image/shadown2/PNG)
+   + ![]( /image/shadown2.PNG)
    + cột thứ 1 tên người sử dụng.
    + Cột thứ 2:Mật khẩu đã được mã hóa. Để trống – không có mật khẩu, Dấu “*” – tài khoản bị tạm ngưng (disable). 
    + Cột thứ 3:Số ngày kể từ lần cuối thay đổi mật khẩu 
