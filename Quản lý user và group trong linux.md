@@ -1,7 +1,32 @@
-﻿# Quản lý User và Group trong Linux
+﻿# Mục lục.
  
+ - [ 1.Quản lý user ](#1)
+ 
+ - [1.1 Giới thiệu ](#1.1)
+ 
+ - [1.2 file /etc/passwd](#1.2)
+ 
+ - [1.3 fule /etc/shadown](#1.3)
+ 
+ - [1.4 Các lệnh quản lí user](#1.4)
+ 
+ - [ 2.Quản trị group](#2)
+ 
+ - [ 2.1.Lệnh Groupadd](#2.1)
+ 
+ - [2.2.Lệnh Groupmod](#2.2)
+ 
+ - [2.3.Lệnh Groupdel](#2.3)
+ 
+ 
+ 
+ 
+ # Quản lý User và Group trong Linux
+ 
+ <a name="1"><a>
  # 1.Quản lý User
  
+ <a name="1.1"><a>
  ## 1.1 Giới thiệu
  
  - User là gì ?
@@ -18,7 +43,8 @@
    + Mỗi user có một mã định danh duy nhất (uid). 
    + Mỗi user có thể thuộc về nhiều nhóm. 
    + Tài khoản superuser có uid = gid = 0. 
-   
+  
+ <a name="1.2"><a> 
  ## 1.2:file /etc/passwd
  - là file văn bản chứa các thông tin các tài khoản User trên máy.Các user có thể đọc tập tin này nhưng chỉ có `User root` có quyền thay đổi.
  - dùng lệnh `cat /etc/passwd` để xem nội dung file:
@@ -31,7 +57,8 @@
    + Cột thứ 4 Group ID là định danh nhóm người dùng chỉ rõ người dùng thuộc nhóm nào.
    + Cột thứ 5 thư mục home của người dùng
    + Cột thứ 6 đường dẫn của dòng lệnh
-   
+
+<a name="1.3"><a>
  ## 1.3:file /etc/shadow
  - là file văn bản chứa các thông tin mật khẩu của các user trên máy.Chỉ có root mới có quyền đọc tập tin này.User root có quyền reset mật khẩu bất cứ user nào trên  máy.
  - sử dụng `cat /etc/shadown` :
@@ -46,6 +73,8 @@
    + Cột thứ 6:Số ngày cảnh báo user trước khi mật khẩu hết hạn 
    + Cột thứ 7:Số ngày sau khi mật khẩu hết hạn tài khoản sẽ bị xóa. Thường có giá trị 7 (một tuần). 
    + Cột thứ 8:Số ngày kể từ khi tài khoản bị khóa 
+   
+  <a name="1.4"><a> 
  ## 1.4 Các lệnh quản lý user
  - a,Lệnh Useradd:Tạo tài khoản 
  - `useradd [options] login_name`
@@ -83,23 +112,32 @@
     + -W: Thiết lập số ngày cảnh báo trước khi hết hạn mật khẩu. 
     + ví dụ: ` chage -E 10-10-2030 -I 15 -m 3 -M 90 -W 10 giaovien1 `
     + Lệnh trên sẽ thiết lập user giaovien1 có ngày hết hạn là 10-10-2030 user sẽ bị khóa 15 ngày sau khi hết hạn mật khẩu.User giaovien      1 có tối thiểu 3 ngày được phép thay đổi mật khẩu và có tối đa 90 được phép thay mật khẩu,hệ thống sẽ báo 10 ngày trước khi hết hạn      mật khẩu.
-    
+
+<a name="2"><a>
   # 2. Quản trị Group
   - Nhóm là tập hợp của nhiều user. Mỗi nhóm có tên duy nhất, và có một mã định danh duy nhất (gid). Khi tạo một user (không dùng option   -g) thì mặc định một group được tạo ra. 
-  
+<a name="2.1"><a>
   ## 2.1:Lệnh groupadd
   - Lệnh tạo nhóm `groupadd [options] tên_group`
   - options: -g Định nghĩa nhóm với mã nhóm GID
   - vd: Tạo nhóm sv1: `groupadd sv1`
+ 
+ <a name="2.2"><a>
   ## 2.2: Lệnh groupmod-Sửa thông tin nhóm
   - Lệnh sửa `groupmod [options] group`
   - options: 
     + -g sửa mã nhóm thành GID
     + -n group_name sửa tên group
   - ví dụ: sửa tên group sv1 thành svien1 `groupmod -n svien1 sv1 `
+ 
+ <a name="2.3"><a>
   ## 2.3: Lệnh groupdel- xóa group
   - Cấu trúc lệnh: `groupdel [option] group
   - ví dụ: xóa group hoctap `groupdel hoctap`
+  
+  # Mục lục
+  [1] Giáo trình quản trị hệ thống Linux LPI 1 của Newstar.
+  [2] https://support.maxserver.com/767313--H%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-qu%E1%BA%A3n-l%C3%BD-User-v%C3%A0-Group-tr%C3%AAn-Linux
     
     
   
