@@ -23,7 +23,8 @@
  - là file văn bản chứa các thông tin các tài khoản User trên máy.Các user có thể đọc tập tin này nhưng chỉ có `User root` có quyền thay đổi.
  - dùng lệnh `cat /etc/passwd` để xem nội dung file:
    + ![]( /image/etc.passwd1.PNG)
-   + ![]( /image/etc.passwd2/PNG)
+   
+   + ![]( /image/etc.passwd2.PNG)
    + Cột thứ nhất là tên người dùng:giaovien1,giaovien2,sinhvien1,....
    + Cột thứ hai chỉ ra mật khẩu đã được mã hóa và lưu ở tập tin shadown
    + Cột thứ 3  User ID là định định danh duy nhất của người dùng
@@ -35,5 +36,71 @@
  - là file văn bản chứa các thông tin mật khẩu của các user trên máy.Chỉ có root mới có quyền đọc tập tin này.User root có quyền reset mật khẩu bất cứ user nào trên  máy.
  - sử dụng `cat /etc/shadown` :
    + ![]( /image/shadown1.PNG)
-   + ![]( /image/shadown2/PNG)
+   
+   + ![]( /image/shadown2.PNG)
    + cột thứ 1 tên người sử dụng.
+   + Cột thứ 2:Mật khẩu đã được mã hóa. Để trống – không có mật khẩu, Dấu “*” – tài khoản bị tạm ngưng (disable). 
+   + Cột thứ 3:Số ngày kể từ lần cuối thay đổi mật khẩu 
+   + Cột thứ 4:Số ngày trước khi có thể thay đổi mật khẩu, giá trị 0 có nghĩa có thể thay đổi bất kỳ lúc nào. 
+   + Cột thứ 5:Số ngày mật khẩu có giá trị. 99999 có ý nghĩa mật khẩu có giá trị vô thời hạn
+   + Cột thứ 6:Số ngày cảnh báo user trước khi mật khẩu hết hạn 
+   + Cột thứ 7:Số ngày sau khi mật khẩu hết hạn tài khoản sẽ bị xóa. Thường có giá trị 7 (một tuần). 
+   + Cột thứ 8:Số ngày kể từ khi tài khoản bị khóa 
+ ## 1.4 Các lệnh quản lý user
+ - a,Lệnh Useradd:Tạo tài khoản 
+ - `useradd [options] login_name`
+ - options:
+   + -c: comment, tạo bí danh. 
+   + -u: set user ID. Mặc định sẽ lấy số ID tiếp theo để gán cho user.   
+   + -d: chỉ định thư mục home. 
+   + -g: chỉ định nhóm chính. 
+   + -G: chỉ định nhóm phụ (nhóm mở rộng). 
+   + -s: chỉ định shell cho user sử dụng.
+   + Ví dụ: tạo user sinhvien1 thuộc group sinhvien
+   + `useradđ sinhvien1 -g sinhvien`
+    ![]( /image/useradd.PNG)  
+ - b,Lệnh usermod: Sửa thông tin tài khoản 
+ - `usermod [options] login_name`
+   - options:
+    + -c: comment, tạo bí danh. 
+    +  -l -d: thay đổi thư mục home. 
+    + -g: chỉ định nhóm chính.
+    + -G: chỉ định nhóm phụ (nhóm mở rộng). 
+    + -s: chỉ định shell cho user sử dụng.
+    + -L: Lock account  
+ - c,Lệnh userdel: Xóa tài khoản user 
+ -   `userdel [option] login_name`
+    + option: -r: xóa thư mục home của user 
+     + Ví dụ: xóa user sinhvien 3: `userdel sinhvien3`  
+ - d,Lệnh chage: Dùng để thiết lập các chính sách (policy) cho user. 
+ -   `chage [options] login_name`
+ -  option:
+    + -l : xem chính sách của 1 user
+    + -E: thiết lập ngày hết hạn cho account. Vd: chage -E 6/30/2014 a1
+    + - I: thiết lập số ngày bị khóa sau khi hết hạn mật khẩu 
+    + -m: thiết lập số ngày tối thiểu được phép thay đổi password
+    + -M: thiết lập số ngày tối đa được phép thay đổi password
+    + -W: Thiết lập số ngày cảnh báo trước khi hết hạn mật khẩu. 
+    + ví dụ: ` chage -E 10-10-2030 -I 15 -m 3 -M 90 -W 10 giaovien1 `
+    + Lệnh trên sẽ thiết lập user giaovien1 có ngày hết hạn là 10-10-2030 user sẽ bị khóa 15 ngày sau khi hết hạn mật khẩu.User giaovien      1 có tối thiểu 3 ngày được phép thay đổi mật khẩu và có tối đa 90 được phép thay mật khẩu,hệ thống sẽ báo 10 ngày trước khi hết hạn      mật khẩu.
+    
+  # 2. Quản trị Group
+  - Nhóm là tập hợp của nhiều user. Mỗi nhóm có tên duy nhất, và có một mã định danh duy nhất (gid). Khi tạo một user (không dùng option   -g) thì mặc định một group được tạo ra. 
+  
+  ## 2.1:Lệnh groupadd
+  - Lệnh tạo nhóm `groupadd [options] tên_group`
+  - options: -g Định nghĩa nhóm với mã nhóm GID
+  - vd: Tạo nhóm sv1: `groupadd sv1`
+  ## 2.2: Lệnh groupmod-Sửa thông tin nhóm
+  - Lệnh sửa `groupmod [options] group`
+  - options: 
+    + -g sửa mã nhóm thành GID
+    + -n group_name sửa tên group
+  - ví dụ: sửa tên group sv1 thành svien1 `groupmod -n svien1 sv1 `
+  ## 2.3: Lệnh groupdel- xóa group
+  - Cấu trúc lệnh: `groupdel [option] group
+  - ví dụ: xóa group hoctap `groupdel hoctap`
+    
+    
+  
+ 
