@@ -39,12 +39,32 @@
  ## Sử dụng tcpdump
  
  - Các tùy chọn thường sử dụng trong `tcpdump`
+   + -A : Hiển thị các gói tin bắt được dưới dạng ASCII.
+   + -D hoặc --list-interfaces: List ra thông tin các card mà tcpdump có thể capture gói tin.
+   + -n : In ra thông tin địa chỉ IP của gói tin.
+   + -e: Hiển thị ra header lớp link-layer. Dùng để hiển thì ra địa chỉ MAC đích và MAC nguồn của gói tin bị capture.
+   + -r file-name: Đọc gói tin từ 1 file đã được lưu thông tin các gói bắt được trước đó.
    + -c: chỉ số lượng gói cần bắt.
    + -i: bắt lưu lượng một giao diện cụ thể.
-   + -t :cung cấp đầu ra dấu thời gian có thể đọc được.
+   + -t :Bỏ in thời gian capture gói tin ở mỗi dòng.
+   + -ttt: In thêm khoảng thời gian bắt gói tin hiện tại và thời gian bắt gói tin trước đó tại mỗi đầu dòng.
+   + -tttt: Hiển thị thông tin chi tiết về thời gian yyyy/mm/dd hh:mm:ss bắt gói tin tại mỗi đầu dòng.
    + -S :in số thứ tự tuyệt đối
    + -D:Hiển thị các giao diện mạng có sẵn.
    + -w:Ghi lại thông tin các gói tin bắt được
+   + Các bạn có thể tìm hiểu ở dưới phần tham khảo!
+ - Một số tùy chọn bộ lọc sử dụng với tcpdump:
+   + dst host host : lọc các gói tin có địa chỉ IP hoặc tên host đích của gói tin là host
+   + and, or, not : sử dụng kết hợp các bộ lọc.
+   + ether dst host ehost : lọc gói tin nếu MAC đích của gói tin ethernet có giá trị là ehost
+   + ether src host ehost: tương tự với giá trị là MAC nguồn.
+   + ether host ehost :lọc gói tin nếu gói tin ethernet có MAC đích hoặc MAC nguồn là ehost
+   + dst port port : lọc gói tin nếu gói tin bắt được có port đích bằng với port
+   + ip proto protocol: lọc các gói tin ipv4 có giao thức là protocol. Ví dụ: tcp, udp, icmp, arp
+   + less length : lọc nếu gói tin có kích thước nhỏ hơn hoặc bằng length (tính bằng byte)
+   + các bạn có thể tìm hiểu thêm ở dưới phần tham khảo..
+
+
    
    
  - Một vài lệnh cơ bản:
@@ -69,5 +89,7 @@
 [1] https://blogd.net/linux/vi-du-ve-su-dung-lenh-tcpdump/#7-b%E1%BA%AFt-c%C3%A1c-g%C3%B3i-v%C3%A0-ghi-v%C3%A0o-m%E1%BB%99t-t%E1%BB%87p
 
 [2] https://www.tcpdump.org/manpages/tcpdump.1.html
+
+[3] https://www.tcpdump.org/manpages/pcap-filter.7.html
 
 
