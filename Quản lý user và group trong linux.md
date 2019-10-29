@@ -8,6 +8,8 @@
  
  - [1.3 fule /etc/shadown](#1.3)
  
+ - [1.4 Các lệnh quản lí user](#1.4)
+ 
  - [ 2.Quản trị group](#2)
  
  - [ 2.1.Lệnh Groupadd](#2.1)
