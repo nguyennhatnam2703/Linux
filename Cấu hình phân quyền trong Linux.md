@@ -108,5 +108,6 @@
   + -R: Áp dụng đối với thư mục làm cho lệnh chmod có tác dụng trên cả các thư mục con (đệ quy). 
   + group: nhóm sở hữu mới
   + ví dụ:`chgrp sinhvien Tailieu`: group sinhvien là nhóm sở hữu mới của thư mục Tailieu
+# 4.SUID,SGID  
    
  
