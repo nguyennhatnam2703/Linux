@@ -52,7 +52,11 @@
  - :q Thoát nếu không thay đổi
  - :q! thoát không lưu
  - :r mở tập tin đọc
-
+# 7.Bôi đen
+- v bôi đen một vùng text được chọn bởi các phím H,K,L,J
+- V chọn nhanh dòng hiện tại
+- vap chọn dòng văn bản hiện tại
+- ggVG chọn toàn bộ file
 
 
 
