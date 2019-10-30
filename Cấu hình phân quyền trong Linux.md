@@ -32,4 +32,32 @@
   + Quyền của người sở hữu(u): Là người tạo ra thư mục/file hoặc người được gán quyền sở hữu
   + Quyền của nhóm sở hữu (g): Là nhóm người sử dụng được gán quyền
   + Quyền của người dùng khác: Là những người không thuộc hai nhóm trên
-  
+
+# 2.Biểu diễn quyền truy xuất
+
+## 2.1: Bằng chữ:
+
+- Trong cách biểu diễn này,các quyền được biểu diễn bằng ký tự
+  + r:read
+  + w: write
+  + e:thực thi
+  + -:không có quyền
+  + rwx: có toàn quyền
+  + rw-: chỉ có quyền đọc và ghi
+  + r--: chỉ có quyền đọc
+  + ---: không có quyền gì
+- Quyền hạn trên một file sẽ gồm cả ba nhóm quyền nên danh sách sẽ gồm 9 ký tự.Ví dụ
+  + rwxrw---- :Người sở hữu có toàn quyền,các user cùng nhóm có quyền đọc và ghi,các user khác không có quyền gì.
+  + rw-r-----:Người sở hữu có quyền đọc và ghi,các user cùng nhóm có quyền đọc,các user khác không có quyền gì.
+  + rwx-w-r--:Người sở hữu có toàn quyền,các user cùng nhóm có quyền ghi,các user khác có quyền đọc.
+
+## 2.2 Bằng số:
+
+- Trong cách biểu diễn này,các quyền được biểu diễn bằng số
+   
+  | Số | Quyền |
+  |----|-------|
+  |4|Đọc
+  |2|Ghi|
+  |1|Thực thi|
+  |0|Không có quyền|
