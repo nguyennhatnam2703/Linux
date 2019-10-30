@@ -81,7 +81,7 @@
 # 3.Các lệnh về quyền
 
 - `Lệnh CHMOD `: Thay đổi quyền truy xuất trên thư mục và tạp tin
-- Cấu trúc tập lệnh: `chmod [ options] mode file
+- Cấu trúc tập lệnh: `chmod [ options] mode file`
 - options:
   + -R: Áp dụng đối với thư mục làm cho lệnh chmod có tác dụng trên cả các thư mục con (đệ quy). 
   + mode: quyền truy xuất mới trên tập tin
@@ -98,13 +98,13 @@
   |o=x|chỉ cho phép thực thi với mọi người|
   
 - `Lệnh chown`:Thay đổi người sở hữu
-- Cấu trúc tập lệnh:` chown [options] owner file
+- Cấu trúc tập lệnh:` chown [options] owner file`
   + -R: Áp dụng đối với thư mục làm cho lệnh chmod có tác dụng trên cả các thư mục con (đệ quy). 
   + owner người sở hữu mới
   + ví dụ: `chown giaovien1 Baigiang`: giaovien1 là người sở hữu mới của thư mục bài giảng.
   
 - `Lệnh chgrp`: thay đổi nhóm sở hữu
-- Cấu trúc tập lệnh:`chgrp [options] group file
+- Cấu trúc tập lệnh:`chgrp [options] group file`
   + -R: Áp dụng đối với thư mục làm cho lệnh chmod có tác dụng trên cả các thư mục con (đệ quy). 
   + group: nhóm sở hữu mới
   + ví dụ:`chgrp sinhvien Tailieu`: group sinhvien là nhóm sở hữu mới của thư mục Tailieu
