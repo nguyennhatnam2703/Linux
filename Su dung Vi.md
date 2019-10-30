@@ -21,7 +21,7 @@
  - ) cuối câu
  - ( đầu câu
  - } đầu văn bản
- -{ cuối văn bản
+ - { cuối văn bản
  - gg đầu file
  - G cuối file
  
@@ -47,7 +47,7 @@
  ## 6.Thao tác trên tập tin
  - :w: Ghi vào tập tin
  - :x Lưu và thoát khỏi chế độ soạn thảo
- -:wq lưu và thoát khỏi chế độ soạn thảo
+ - :wq lưu và thoát khỏi chế độ soạn thảo
  - :w lưu vào tâp tin mới
  - :q Thoát nếu không thay đổi
  - :q! thoát không lưu
