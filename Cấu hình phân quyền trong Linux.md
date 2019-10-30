@@ -16,7 +16,7 @@
  - Các loại quyền truy xuất:  
    + Read(r) :Đối với một file thì Read chính là quyền xem nội dung file đó còn đối với một folder thì Read chính là quyền xem các file      trong folder đó.
    + Write(w):Đối với một file thì Write cho phép thêm,sửa nội dung file còn đối với một folder thì Write cho phép thêm xóa một subfolder hay một file trong folder đó.
-   + Execute(e):Cho phép thực thi chương trình,đối với thư mục thì Execute cho phép chuyển vào thư mục bằng lệnh cd
+   + Execute(x):Cho phép thực thi chương trình,đối với thư mục thì Execute cho phép chuyển vào thư mục bằng lệnh cd
    + Deny (-): không có quyền làm một thao tác gì trên file hay thư mục
  - Kiểu file:
  
@@ -40,7 +40,7 @@
 - Trong cách biểu diễn này,các quyền được biểu diễn bằng ký tự
   + r:read
   + w: write
-  + e:thực thi
+  + x:thực thi
   + -:không có quyền
   + rwx: có toàn quyền
   + rw-: chỉ có quyền đọc và ghi
