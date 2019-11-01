@@ -86,6 +86,9 @@
   + DNAT: Trạng thái này được gán cho các gói tin mà địa chỉ đích đã bị NAT, được dùng bởi hệ thống connection tracking để biết khi nào cần thay đổi lại địa chỉ cho các gói tin gởi đi.
   
  # 3. Cấu hình Iptable cơ bản:
+ 
+ - `iptables -t [table] [command] [match] [target] `
+ 
  - Các lệnh cơ bản của Iptable:
  
  | Option | Mô tả |
@@ -116,4 +119,20 @@
  |!|Phủ định một mệnh đề|
  |–state|Khớp với một tập các trạng thái của kết nối (ESTABLISHED, RELATED….)|
  |–string|Khớp với một chuỗi của dữ liệu ở tần ứng dụng (layer 7 – application layer)|
+ 
+ - Target:
+ |Target| Ý nghĩa|
+ |------|--------|
+ |ACCEPT|Cho phép chain thông qua rules|
+ |DROP|Không cho phép chain thông qua rules|
+ |REJECT|Làm việc giống DROP nhưng có gửi lại gói tin error message|
+ |RETURN|Packet sẽ không traverse ở chain hiện tại. Nếu nó là subchain thì nó sẽ quay lại superior chain. Nếu nó là main chain thì policy sẽ được áp dụng.|
+ |REDIRECT|Rewrite lại địa chỉ của gói tin|
+ 
+ # Tham khảo:
+ 
+ - [1] https://tech.bizflycloud.vn/tim-hieu-ve-iptables-phan-1-660.htm
+ - [2] https://viblo.asia/p/network-tim-hieu-ve-iptables-n7prv348RKod
+ - [3] https://cloudcraft.info/gioi-thieu-ve-iptables/
+ 
    
