@@ -121,6 +121,7 @@
  |–string|Khớp với một chuỗi của dữ liệu ở tần ứng dụng (layer 7 – application layer)|
  
  - Target:
+ 
  |Target| Ý nghĩa|
  |------|--------|
  |ACCEPT|Cho phép chain thông qua rules|
