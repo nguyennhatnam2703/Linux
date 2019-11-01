@@ -131,6 +131,13 @@
  |RETURN|Packet sẽ không traverse ở chain hiện tại. Nếu nó là subchain thì nó sẽ quay lại superior chain. Nếu nó là main chain thì policy sẽ được áp dụng.|
  |REDIRECT|Rewrite lại địa chỉ của gói tin|
  
+ # 4.Ví dụ
+ 
+ - Xem các rules đang có trong iptables: ` iptables -L -v `
+  
+ 
+ 
+ 
  # Tham khảo:
  
  - [1] https://tech.bizflycloud.vn/tim-hieu-ve-iptables-phan-1-660.htm
