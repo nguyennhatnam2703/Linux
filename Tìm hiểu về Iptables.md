@@ -143,5 +143,6 @@
  - [1] https://tech.bizflycloud.vn/tim-hieu-ve-iptables-phan-1-660.htm
  - [2] https://viblo.asia/p/network-tim-hieu-ve-iptables-n7prv348RKod
  - [3] https://cloudcraft.info/gioi-thieu-ve-iptables/
+ - [4] https://thachpham.com/linux-webserver/iptables-linux-toan-tap.html
  
    
