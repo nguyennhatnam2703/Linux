@@ -26,7 +26,8 @@
    + Input chain: lọc gói tin khi đến server
    + Output chain:lọc gói khi ra khỏi server
  
- - `NAT tables` :gồn hai loại
+ - `NAT tables` : Khi các gói tin đi vào bảng này, gói tin sẽ được kiểm tra xem có cần thay đổi và sẽ thay đổi địa chỉ nguồn, đích của gói tin như thế nào.Bảng này được sử dụng khi có một gói tin từ một connection mới gởi đến hệ thống, các gói tin tiếp theo của connection này sẽ được áp rule và xử lý tương tự như gói tin đầu tiên mà không cần phải đi qua bảng NAT nữa.
+ gồm hai loại
    + Pre-routing chain: thay đổi địa chỉ đến của gói dữ liệu khi cần thiết.
    + Post-routing chain: thay đổi địa chỉ nguồn của gói dữ liệu khi cần thiết.
    
