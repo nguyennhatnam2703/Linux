@@ -88,6 +88,9 @@
     + `enable`: service sẽ được khởi động cùng hệ thống
     
     + `disable`: service sẽ không được khởi động cùng hệ thống
+    
+    # Tham khao
+    - [1] https://viblo.asia/p/tim-hieu-va-van-dung-systemd-de-quan-ly-he-thong-linux-phan-co-ban-WAyK8kN65xX#_service-6
    
    
 
